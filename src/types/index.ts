@@ -1,1 +1,1 @@
-export type {ISendOtp,ILogin,IResponse,IVerifyOtp} from "./auth.type"
+export type {ISendOtp,ILogin,IResponse,IVerifyOtp,ISidebarItem,TRole} from "./auth.type"

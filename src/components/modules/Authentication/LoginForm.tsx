@@ -27,8 +27,10 @@ export function LoginForm({
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
       const res = await login(data).unwrap();
-       navigate("/");
-      console.log(res);
+        if (res.success) {
+        toast.success("Logged in successfully");
+        navigate("/");
+      }
     } catch (err:any) {
      console.error(err);
 
@@ -40,6 +42,7 @@ export function LoginForm({
       if(err.data.message === "Password does not match"){
         toast.error("Invalid Credentials");
       }
+
     }
   };
 
