@@ -25,10 +25,11 @@ import AddDivision from "../../../../pages/Admin/AddDivision";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useAddDivisionMutation } from "@/redux/features/division/division.api";
+import type { FileMetadata } from "@/hooks/use-file-upload";
 
 export function AddDivisionModal() {
   const [open, setOpen] = useState(false);
-  const [image, setImage] = useState<File | null>(null);
+const [image, setImage] = useState<File | FileMetadata | null>(null);
   const [addDivision] = useAddDivisionMutation();
     const [loading, setLoading] = useState(false);
   console.log("Inside add division modal", image);

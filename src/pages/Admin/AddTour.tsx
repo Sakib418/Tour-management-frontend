@@ -40,7 +40,7 @@ import {
   useAddTourMutation,
   useGetTourTypesQuery,
 } from "@/redux/features/Tour/tour.api";
-//import { IErrorResponse } from "@/types";
+import type { IErrorResponse } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { format, formatISO } from "date-fns";
 import { CalendarIcon, Plus, Trash2 } from "lucide-react";

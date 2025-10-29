@@ -1,9 +1,13 @@
 import { AlertCircleIcon, ImageUpIcon, XIcon } from "lucide-react"
 
-import { useFileUpload } from "@/hooks/use-file-upload"
+import { useFileUpload, type FileMetadata } from "@/hooks/use-file-upload"
 import { useEffect } from "react"
 
-export default function SingleImageUploader({onChange}) {
+interface SingleImageUploaderProps {
+  onChange: React.Dispatch<React.SetStateAction<File | FileMetadata | null>>;
+}
+
+export default function SingleImageUploader({ onChange }: SingleImageUploaderProps) {
   const maxSizeMB = 5
   const maxSize = maxSizeMB * 1024 * 1024 // 5MB default
 
